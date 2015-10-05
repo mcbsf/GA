@@ -1,17 +1,37 @@
 import pages.*
-//import ga.publication.Periodico ***importar contrato
+//import ga.contrato ***importar contrato
 import steps.TestDataAndOperations
 
-Given(~'^o sistema tem um contrato com o jogador "([^"]*)" no periodo de "([^"]*)" ate "([^"]*)" salvo com nome "([^"]*)"$') { String name, dateBegin, dateEnd, fileName ->
-	TestDataAndOperations.createContrato(name, dateBegin, dateEnd)
-	contrato = Periodico.findWHere(name: "Carlos", dateBegin: "10/10/2010", dateEnd: "0/10/2016")
+
+//cenario de cancelamento de contrato(controller)
+Given(~'^o sistema tem um contrato com o jogador "([^"]*)" no periodo de "([^"]*)" ate "([^"]*)" no clube "([^"]*)" de valor "([^"]*)"$') { String name, dateBegin, dateEnd, club, val ->
+	TestDataAndOperation.createContrato(name, dateBegin, dateEnd, club)
+	contrato = Contrato.findWHere(contratado: name, data_Inicio: dateBegin, data_Termino: dateEnd, contratante: club, valor: val)
 	assert contrato != null
 }
-When(~'^eu deleto o contrato de jogador "([^"]*)" no periodo de "([^"]*)" ate "([^"]*)"$') { String title ->
-    //contrato = Periodico.findWHere(name: "Carlos", dateBegin: "10/10/2010", dateEnd: "0/10/2016")
-    TestDataAndOperations.removeFromContrato(name, dateBegin, dateEnd)
+When(~'^eu deleto o contrato de jogador "([^"]*)" no periodo de "([^"]*)" ate "([^"]*)" no clube "([^"]*)" de valor "([^"]*)"$') { String name, dateBegin, dateEnd, club, val ->
+    contrato = Contrato.findWHere(contratado: name, data_Inicio: dateBegin, data_Termino: dateEnd, contratante: club, valor: val)
+    TestDataAndOperations.removeContrato(contrato)
 }
-Then(~'^the article "([^"]*)" is properly removed by the system$') { String title ->
-    contrato = Periodico.findWHere(name: "Carlos", dateBegin: "10/10/2010", dateEnd: "0/10/2016")
-    assert article == null
+Then(~'^o contrato de jogador "([^"]*)" no periodo de "([^"]*)" ate "([^"]*)" no clube "([^"]*)" de valor "([^"]*)" e removido do sistema$') { String name, dateBegin, dateEnd, club, val ->
+    contrato = Contrato.findWHere(contratado: name, data_Inicio: dateBegin, data_Termino: dateEnd, contratante: club, valor: val)
+    assert contrato == null
 }
+
+//cenario de cancelamento de contrato(GUI)
+
+Given(~'^eu estou na pagina de vizualizacao de contratos$') {->
+    to ContratoPage
+    at ContratoPage
+}
+
+Given(~'^tem o sistema tem apenas um contrato armazenado com o jogador "([^"]*)" no periodo de "([^"]*)" ate "([^"]*)" no clube "([^"]*)" de valor "([^"]*)"$') {String name, dateBegin, dateEnd, club, val->
+	contrato = Contrato.findWHere(contratado: name, data_Inicio: dateBegin, data_Termino: dateEnd, contratante: club, valor: val)
+	assert contrato.size() == 1
+}
+
+When(~'^eu dou um click para remover o contrato de jogador "([^"]*)" no periodo de "([^"]*)" ate "([^"]*)" no clube "([^"]*)" de valor "([^"]*)"$') { String status ->
+	at ContratoPage
+}
+
+Then(~'^a mensagem de confirmacao do cancelamento "([^"]*)" e mostrada$') { String status ->
