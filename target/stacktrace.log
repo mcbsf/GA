@@ -2783,3 +2783,522 @@ http://localhost:8080/book/list
 	at geb.binding.BindingUpdater$InvocationForwarding.doCall(BindingUpdater.groovy:72)
 	at Book_Steps$_run_closure1.doCall(Book_Steps.groovy:6)
 	at ✽.Given I open the book tracker(NewBook.feature:7)
+2015-10-05 16:31:56,246 [main] ERROR StackTrace  - Full Stack Trace:
+org.springframework.orm.hibernate4.HibernateQueryException: could not resolve property: data_Inicio of: ga.Contrato; nested exception is org.hibernate.QueryException: could not resolve property: data_Inicio of: ga.Contrato
+	at org.springframework.orm.hibernate4.SessionFactoryUtils.convertHibernateAccessException(SessionFactoryUtils.java:173)
+	at org.grails.datastore.gorm.GormStaticApi.findWhere(GormStaticApi.groovy:621)
+	at ga.Contrato.findWhere(Contrato.groovy)
+	at ga.Contrato$findWhere$0.call(Unknown Source)
+	at steps.ContratoSteps$_run_closure1.doCall(ContratoSteps.groovy:12)
+	at ✽.Given o sistema tem um contrato com o jogador "Carlos" no periodo de "10/10/2010" ate "10/10/2016" no clube "ABC"(Contrato.feature:7)
+Caused by: org.hibernate.QueryException: could not resolve property: data_Inicio of: ga.Contrato
+	at org.hibernate.persister.entity.AbstractPropertyMapping.propertyException(AbstractPropertyMapping.java:83)
+	at org.hibernate.persister.entity.AbstractPropertyMapping.toType(AbstractPropertyMapping.java:77)
+	at org.hibernate.persister.entity.AbstractEntityPersister.getSubclassPropertyTableNumber(AbstractEntityPersister.java:1995)
+	at org.hibernate.persister.entity.BasicEntityPropertyMapping.toColumns(BasicEntityPropertyMapping.java:61)
+	at org.hibernate.persister.entity.AbstractEntityPersister.toColumns(AbstractEntityPersister.java:1970)
+	at org.hibernate.loader.criteria.CriteriaQueryTranslator.getColumns(CriteriaQueryTranslator.java:518)
+	at org.hibernate.loader.criteria.CriteriaQueryTranslator.findColumns(CriteriaQueryTranslator.java:534)
+	at org.hibernate.criterion.SimpleExpression.toSqlString(SimpleExpression.java:82)
+	at org.hibernate.criterion.Junction.toSqlString(Junction.java:100)
+	at org.hibernate.loader.criteria.CriteriaQueryTranslator.getWhereCondition(CriteriaQueryTranslator.java:417)
+	at org.hibernate.loader.criteria.CriteriaJoinWalker.<init>(CriteriaJoinWalker.java:123)
+	at org.hibernate.loader.criteria.CriteriaJoinWalker.<init>(CriteriaJoinWalker.java:92)
+	at org.hibernate.loader.criteria.CriteriaLoader.<init>(CriteriaLoader.java:97)
+	at org.hibernate.internal.SessionImpl.list(SessionImpl.java:1663)
+	at org.hibernate.internal.CriteriaImpl.list(CriteriaImpl.java:380)
+	at org.hibernate.internal.CriteriaImpl.uniqueResult(CriteriaImpl.java:402)
+	at com.sun.proxy.$Proxy43.doInHibernate(Unknown Source)
+	at org.grails.datastore.gorm.GormStaticApi.findWhere(GormStaticApi.groovy:621)
+	at ga.Contrato.findWhere(Contrato.groovy)
+	at ga.Contrato$findWhere$0.call(Unknown Source)
+	at steps.ContratoSteps$_run_closure1.doCall(ContratoSteps.groovy:12)
+	at cucumber.runtime.groovy.GroovyBackend.invoke(GroovyBackend.java:155)
+	at cucumber.runtime.groovy.GroovyStepDefinition$1.call(GroovyStepDefinition.java:71)
+	at cucumber.runtime.Timeout.timeout(Timeout.java:13)
+	at cucumber.runtime.groovy.GroovyStepDefinition.execute(GroovyStepDefinition.java:68)
+	at cucumber.runtime.StepDefinitionMatch.runStep(StepDefinitionMatch.java:37)
+	at cucumber.runtime.Runtime.runStep(Runtime.java:298)
+	at cucumber.runtime.model.StepContainer.runStep(StepContainer.java:44)
+	at cucumber.runtime.model.StepContainer.runSteps(StepContainer.java:39)
+	at cucumber.runtime.model.CucumberScenario.run(CucumberScenario.java:48)
+	at cucumber.runtime.model.CucumberFeature.run(CucumberFeature.java:163)
+	at cucumber.runtime.model.CucumberFeature$run$0.call(Unknown Source)
+	at grails.plugin.cucumber.Cucumber$_run_closure2.doCall(Cucumber.groovy:59)
+	at grails.plugin.cucumber.Cucumber.run(Cucumber.groovy:58)
+	at grails.plugin.cucumber.Cucumber$run$1.call(Unknown Source)
+	at grails.plugin.cucumber.CucumberTestType.runFeatures(CucumberTestType.groovy:148)
+	at grails.plugin.cucumber.CucumberTestType.this$3$runFeatures(CucumberTestType.groovy)
+	at grails.plugin.cucumber.CucumberTestType$this$3$runFeatures$3.callCurrent(Unknown Source)
+	at grails.plugin.cucumber.CucumberTestType.doRun(CucumberTestType.groovy:58)
+	at _GrailsTest$_run_closure1.doCall(_GrailsTest.groovy:102)
+	at org.codehaus.gant.GantMetaClass.invokeMethod(GantMetaClass.java:133)
+	at org.codehaus.gant.GantBinding$_initializeGantBinding_closure5_closure16_closure18.doCall(GantBinding.groovy:185)
+	at org.codehaus.gant.GantBinding$_initializeGantBinding_closure5_closure16_closure18.doCall(GantBinding.groovy)
+	at org.codehaus.gant.GantBinding.withTargetEvent(GantBinding.groovy:90)
+	at org.codehaus.gant.GantBinding.this$4$withTargetEvent(GantBinding.groovy)
+	at org.codehaus.gant.GantBinding$_initializeGantBinding_closure5_closure16.doCall(GantBinding.groovy:185)
+	at org.codehaus.gant.GantBinding$_initializeGantBinding_closure5_closure16.doCall(GantBinding.groovy)
+	at org.codehaus.gant.GantMetaClass.invokeMethod(GantMetaClass.java:133)
+	at TestApp$_run_closure1.doCall(TestApp.groovy:32)
+	at org.codehaus.gant.GantMetaClass.invokeMethod(GantMetaClass.java:133)
+	at org.codehaus.gant.GantBinding$_initializeGantBinding_closure5_closure16_closure18.doCall(GantBinding.groovy:185)
+	at org.codehaus.gant.GantBinding$_initializeGantBinding_closure5_closure16_closure18.doCall(GantBinding.groovy)
+	at org.codehaus.gant.GantBinding.withTargetEvent(GantBinding.groovy:90)
+	at org.codehaus.gant.GantBinding.this$4$withTargetEvent(GantBinding.groovy)
+	at org.codehaus.gant.GantBinding$_initializeGantBinding_closure5_closure16.doCall(GantBinding.groovy:185)
+	at org.codehaus.gant.GantBinding$_initializeGantBinding_closure5_closure16.doCall(GantBinding.groovy)
+	at gant.Gant$_dispatch_closure5.doCall(Gant.groovy:381)
+	at gant.Gant$_dispatch_closure7.doCall(Gant.groovy:415)
+	at gant.Gant$_dispatch_closure7.doCall(Gant.groovy)
+	at gant.Gant.withBuildListeners(Gant.groovy:427)
+	at gant.Gant.this$2$withBuildListeners(Gant.groovy)
+	at gant.Gant$this$2$withBuildListeners$0.callCurrent(Unknown Source)
+	at gant.Gant.dispatch(Gant.groovy:415)
+	at gant.Gant.this$2$dispatch(Gant.groovy)
+	at gant.Gant.invokeMethod(Gant.groovy)
+	at gant.Gant.executeTargets(Gant.groovy:591)
+	at gant.Gant.executeTargets(Gant.groovy:590)
+	at com.intellij.rt.execution.application.AppMain.main(AppMain.java:140)
+2015-10-05 16:31:56,292 [main] ERROR StackTrace  - Full Stack Trace:
+org.hibernate.QueryException: could not resolve property: data_Inicio of: ga.Contrato
+	at org.hibernate.persister.entity.AbstractPropertyMapping.propertyException(AbstractPropertyMapping.java:83)
+	at org.hibernate.persister.entity.AbstractPropertyMapping.toType(AbstractPropertyMapping.java:77)
+	at org.hibernate.persister.entity.AbstractEntityPersister.getSubclassPropertyTableNumber(AbstractEntityPersister.java:1995)
+	at org.hibernate.persister.entity.BasicEntityPropertyMapping.toColumns(BasicEntityPropertyMapping.java:61)
+	at org.hibernate.persister.entity.AbstractEntityPersister.toColumns(AbstractEntityPersister.java:1970)
+	at org.hibernate.loader.criteria.CriteriaQueryTranslator.getColumns(CriteriaQueryTranslator.java:518)
+	at org.hibernate.loader.criteria.CriteriaQueryTranslator.findColumns(CriteriaQueryTranslator.java:534)
+	at org.hibernate.criterion.SimpleExpression.toSqlString(SimpleExpression.java:82)
+	at org.hibernate.criterion.Junction.toSqlString(Junction.java:100)
+	at org.hibernate.loader.criteria.CriteriaQueryTranslator.getWhereCondition(CriteriaQueryTranslator.java:417)
+	at org.hibernate.loader.criteria.CriteriaJoinWalker.<init>(CriteriaJoinWalker.java:123)
+	at org.hibernate.loader.criteria.CriteriaJoinWalker.<init>(CriteriaJoinWalker.java:92)
+	at org.hibernate.loader.criteria.CriteriaLoader.<init>(CriteriaLoader.java:97)
+	at org.hibernate.internal.SessionImpl.list(SessionImpl.java:1663)
+	at org.hibernate.internal.CriteriaImpl.list(CriteriaImpl.java:380)
+	at org.hibernate.internal.CriteriaImpl.uniqueResult(CriteriaImpl.java:402)
+	at com.sun.proxy.$Proxy43.doInHibernate(Unknown Source)
+	at org.grails.datastore.gorm.GormStaticApi.findWhere(GormStaticApi.groovy:621)
+	at ga.Contrato.findWhere(Contrato.groovy)
+	at ga.Contrato$findWhere$0.call(Unknown Source)
+	at steps.ContratoSteps$_run_closure1.doCall(ContratoSteps.groovy:12)
+	at cucumber.runtime.groovy.GroovyBackend.invoke(GroovyBackend.java:155)
+	at cucumber.runtime.groovy.GroovyStepDefinition$1.call(GroovyStepDefinition.java:71)
+	at cucumber.runtime.Timeout.timeout(Timeout.java:13)
+	at cucumber.runtime.groovy.GroovyStepDefinition.execute(GroovyStepDefinition.java:68)
+	at cucumber.runtime.StepDefinitionMatch.runStep(StepDefinitionMatch.java:37)
+	at cucumber.runtime.Runtime.runStep(Runtime.java:298)
+	at cucumber.runtime.model.StepContainer.runStep(StepContainer.java:44)
+	at cucumber.runtime.model.StepContainer.runSteps(StepContainer.java:39)
+	at cucumber.runtime.model.CucumberScenario.run(CucumberScenario.java:48)
+	at cucumber.runtime.model.CucumberFeature.run(CucumberFeature.java:163)
+	at cucumber.runtime.model.CucumberFeature$run$0.call(Unknown Source)
+	at grails.plugin.cucumber.Cucumber$_run_closure2.doCall(Cucumber.groovy:59)
+	at grails.plugin.cucumber.Cucumber.run(Cucumber.groovy:58)
+	at grails.plugin.cucumber.Cucumber$run$1.call(Unknown Source)
+	at grails.plugin.cucumber.CucumberTestType.runFeatures(CucumberTestType.groovy:148)
+	at grails.plugin.cucumber.CucumberTestType.this$3$runFeatures(CucumberTestType.groovy)
+	at grails.plugin.cucumber.CucumberTestType$this$3$runFeatures$3.callCurrent(Unknown Source)
+	at grails.plugin.cucumber.CucumberTestType.doRun(CucumberTestType.groovy:58)
+	at _GrailsTest$_run_closure1.doCall(_GrailsTest.groovy:102)
+	at org.codehaus.gant.GantMetaClass.invokeMethod(GantMetaClass.java:133)
+	at org.codehaus.gant.GantBinding$_initializeGantBinding_closure5_closure16_closure18.doCall(GantBinding.groovy:185)
+	at org.codehaus.gant.GantBinding$_initializeGantBinding_closure5_closure16_closure18.doCall(GantBinding.groovy)
+	at org.codehaus.gant.GantBinding.withTargetEvent(GantBinding.groovy:90)
+	at org.codehaus.gant.GantBinding.this$4$withTargetEvent(GantBinding.groovy)
+	at org.codehaus.gant.GantBinding$_initializeGantBinding_closure5_closure16.doCall(GantBinding.groovy:185)
+	at org.codehaus.gant.GantBinding$_initializeGantBinding_closure5_closure16.doCall(GantBinding.groovy)
+	at org.codehaus.gant.GantMetaClass.invokeMethod(GantMetaClass.java:133)
+	at TestApp$_run_closure1.doCall(TestApp.groovy:32)
+	at org.codehaus.gant.GantMetaClass.invokeMethod(GantMetaClass.java:133)
+	at org.codehaus.gant.GantBinding$_initializeGantBinding_closure5_closure16_closure18.doCall(GantBinding.groovy:185)
+	at org.codehaus.gant.GantBinding$_initializeGantBinding_closure5_closure16_closure18.doCall(GantBinding.groovy)
+	at org.codehaus.gant.GantBinding.withTargetEvent(GantBinding.groovy:90)
+	at org.codehaus.gant.GantBinding.this$4$withTargetEvent(GantBinding.groovy)
+	at org.codehaus.gant.GantBinding$_initializeGantBinding_closure5_closure16.doCall(GantBinding.groovy:185)
+	at org.codehaus.gant.GantBinding$_initializeGantBinding_closure5_closure16.doCall(GantBinding.groovy)
+	at gant.Gant$_dispatch_closure5.doCall(Gant.groovy:381)
+	at gant.Gant$_dispatch_closure7.doCall(Gant.groovy:415)
+	at gant.Gant$_dispatch_closure7.doCall(Gant.groovy)
+	at gant.Gant.withBuildListeners(Gant.groovy:427)
+	at gant.Gant.this$2$withBuildListeners(Gant.groovy)
+	at gant.Gant$this$2$withBuildListeners$0.callCurrent(Unknown Source)
+	at gant.Gant.dispatch(Gant.groovy:415)
+	at gant.Gant.this$2$dispatch(Gant.groovy)
+	at gant.Gant.invokeMethod(Gant.groovy)
+	at gant.Gant.executeTargets(Gant.groovy:591)
+	at gant.Gant.executeTargets(Gant.groovy:590)
+	at com.intellij.rt.execution.application.AppMain.main(AppMain.java:140)
+2015-10-05 16:31:56,293 [main] ERROR StackTrace  - Full Stack Trace:
+org.springframework.orm.hibernate4.HibernateQueryException: could not resolve property: data_Inicio of: ga.Contrato; nested exception is org.hibernate.QueryException: could not resolve property: data_Inicio of: ga.Contrato
+	at org.grails.datastore.gorm.GormStaticApi.findWhere(GormStaticApi.groovy:621)
+	at steps.ContratoSteps$_run_closure1.doCall(ContratoSteps.groovy:12)
+	at ✽.Given o sistema tem um contrato com o jogador "Carlos" no periodo de "10/10/2010" ate "10/10/2016" no clube "ABC"(Contrato.feature:7)
+Caused by: org.hibernate.QueryException: could not resolve property: data_Inicio of: ga.Contrato
+	at org.grails.datastore.gorm.GormStaticApi.findWhere(GormStaticApi.groovy:621)
+	at steps.ContratoSteps$_run_closure1.doCall(ContratoSteps.groovy:12)
+	at cucumber.runtime.groovy.GroovyBackend.invoke(GroovyBackend.java:155)
+	at cucumber.runtime.groovy.GroovyStepDefinition$1.call(GroovyStepDefinition.java:71)
+	at cucumber.runtime.Timeout.timeout(Timeout.java:13)
+	at cucumber.runtime.groovy.GroovyStepDefinition.execute(GroovyStepDefinition.java:68)
+	at cucumber.runtime.StepDefinitionMatch.runStep(StepDefinitionMatch.java:37)
+	at cucumber.runtime.Runtime.runStep(Runtime.java:298)
+	at cucumber.runtime.model.StepContainer.runStep(StepContainer.java:44)
+	at cucumber.runtime.model.StepContainer.runSteps(StepContainer.java:39)
+	at cucumber.runtime.model.CucumberScenario.run(CucumberScenario.java:48)
+	at cucumber.runtime.model.CucumberFeature.run(CucumberFeature.java:163)
+	at grails.plugin.cucumber.Cucumber$_run_closure2.doCall(Cucumber.groovy:59)
+	at grails.plugin.cucumber.Cucumber.run(Cucumber.groovy:58)
+	at grails.plugin.cucumber.CucumberTestType.runFeatures(CucumberTestType.groovy:148)
+	at grails.plugin.cucumber.CucumberTestType.doRun(CucumberTestType.groovy:58)
+	at _GrailsTest$_run_closure1.doCall(_GrailsTest.groovy:102)
+	at TestApp$_run_closure1.doCall(TestApp.groovy:32)
+	at com.intellij.rt.execution.application.AppMain.main(AppMain.java:140)
+2015-10-05 16:31:56,323 [main] ERROR StackTrace  - Full Stack Trace:
+org.springframework.orm.hibernate4.HibernateQueryException: could not resolve property: data_Inicio of: ga.Contrato; nested exception is org.hibernate.QueryException: could not resolve property: data_Inicio of: ga.Contrato
+	at org.grails.datastore.gorm.GormStaticApi.findWhere(GormStaticApi.groovy:621)
+	at steps.ContratoSteps$_run_closure1.doCall(ContratoSteps.groovy:12)
+	at ✽.Given o sistema tem um contrato com o jogador "Carlos" no periodo de "10/10/2010" ate "10/10/2016" no clube "ABC"(Contrato.feature:7)
+Caused by: org.hibernate.QueryException: could not resolve property: data_Inicio of: ga.Contrato
+	at org.grails.datastore.gorm.GormStaticApi.findWhere(GormStaticApi.groovy:621)
+	at steps.ContratoSteps$_run_closure1.doCall(ContratoSteps.groovy:12)
+	at cucumber.runtime.groovy.GroovyBackend.invoke(GroovyBackend.java:155)
+	at cucumber.runtime.groovy.GroovyStepDefinition$1.call(GroovyStepDefinition.java:71)
+	at cucumber.runtime.Timeout.timeout(Timeout.java:13)
+	at cucumber.runtime.groovy.GroovyStepDefinition.execute(GroovyStepDefinition.java:68)
+	at cucumber.runtime.StepDefinitionMatch.runStep(StepDefinitionMatch.java:37)
+	at cucumber.runtime.Runtime.runStep(Runtime.java:298)
+	at cucumber.runtime.model.StepContainer.runStep(StepContainer.java:44)
+	at cucumber.runtime.model.StepContainer.runSteps(StepContainer.java:39)
+	at cucumber.runtime.model.CucumberScenario.run(CucumberScenario.java:48)
+	at cucumber.runtime.model.CucumberFeature.run(CucumberFeature.java:163)
+	at grails.plugin.cucumber.Cucumber$_run_closure2.doCall(Cucumber.groovy:59)
+	at grails.plugin.cucumber.Cucumber.run(Cucumber.groovy:58)
+	at grails.plugin.cucumber.CucumberTestType.runFeatures(CucumberTestType.groovy:148)
+	at grails.plugin.cucumber.CucumberTestType.doRun(CucumberTestType.groovy:58)
+	at _GrailsTest$_run_closure1.doCall(_GrailsTest.groovy:102)
+	at TestApp$_run_closure1.doCall(TestApp.groovy:32)
+	at com.intellij.rt.execution.application.AppMain.main(AppMain.java:140)
+2015-10-05 16:31:56,324 [main] ERROR StackTrace  - Full Stack Trace:
+org.hibernate.QueryException: could not resolve property: data_Inicio of: ga.Contrato
+	at org.grails.datastore.gorm.GormStaticApi.findWhere(GormStaticApi.groovy:621)
+	at steps.ContratoSteps$_run_closure1.doCall(ContratoSteps.groovy:12)
+	at cucumber.runtime.groovy.GroovyBackend.invoke(GroovyBackend.java:155)
+	at cucumber.runtime.groovy.GroovyStepDefinition$1.call(GroovyStepDefinition.java:71)
+	at cucumber.runtime.Timeout.timeout(Timeout.java:13)
+	at cucumber.runtime.groovy.GroovyStepDefinition.execute(GroovyStepDefinition.java:68)
+	at cucumber.runtime.StepDefinitionMatch.runStep(StepDefinitionMatch.java:37)
+	at cucumber.runtime.Runtime.runStep(Runtime.java:298)
+	at cucumber.runtime.model.StepContainer.runStep(StepContainer.java:44)
+	at cucumber.runtime.model.StepContainer.runSteps(StepContainer.java:39)
+	at cucumber.runtime.model.CucumberScenario.run(CucumberScenario.java:48)
+	at cucumber.runtime.model.CucumberFeature.run(CucumberFeature.java:163)
+	at grails.plugin.cucumber.Cucumber$_run_closure2.doCall(Cucumber.groovy:59)
+	at grails.plugin.cucumber.Cucumber.run(Cucumber.groovy:58)
+	at grails.plugin.cucumber.CucumberTestType.runFeatures(CucumberTestType.groovy:148)
+	at grails.plugin.cucumber.CucumberTestType.doRun(CucumberTestType.groovy:58)
+	at _GrailsTest$_run_closure1.doCall(_GrailsTest.groovy:102)
+	at TestApp$_run_closure1.doCall(TestApp.groovy:32)
+	at com.intellij.rt.execution.application.AppMain.main(AppMain.java:140)
+2015-10-05 16:31:56,325 [main] ERROR StackTrace  - Full Stack Trace:
+org.springframework.orm.hibernate4.HibernateQueryException: could not resolve property: data_Inicio of: ga.Contrato; nested exception is org.hibernate.QueryException: could not resolve property: data_Inicio of: ga.Contrato
+	at org.grails.datastore.gorm.GormStaticApi.findWhere(GormStaticApi.groovy:621)
+	at steps.ContratoSteps$_run_closure1.doCall(ContratoSteps.groovy:12)
+	at ✽.Given o sistema tem um contrato com o jogador "Carlos" no periodo de "10/10/2010" ate "10/10/2016" no clube "ABC"(Contrato.feature:7)
+Caused by: org.hibernate.QueryException: could not resolve property: data_Inicio of: ga.Contrato
+	at org.grails.datastore.gorm.GormStaticApi.findWhere(GormStaticApi.groovy:621)
+	at steps.ContratoSteps$_run_closure1.doCall(ContratoSteps.groovy:12)
+	at cucumber.runtime.groovy.GroovyBackend.invoke(GroovyBackend.java:155)
+	at cucumber.runtime.groovy.GroovyStepDefinition$1.call(GroovyStepDefinition.java:71)
+	at cucumber.runtime.Timeout.timeout(Timeout.java:13)
+	at cucumber.runtime.groovy.GroovyStepDefinition.execute(GroovyStepDefinition.java:68)
+	at cucumber.runtime.StepDefinitionMatch.runStep(StepDefinitionMatch.java:37)
+	at cucumber.runtime.Runtime.runStep(Runtime.java:298)
+	at cucumber.runtime.model.StepContainer.runStep(StepContainer.java:44)
+	at cucumber.runtime.model.StepContainer.runSteps(StepContainer.java:39)
+	at cucumber.runtime.model.CucumberScenario.run(CucumberScenario.java:48)
+	at cucumber.runtime.model.CucumberFeature.run(CucumberFeature.java:163)
+	at grails.plugin.cucumber.Cucumber$_run_closure2.doCall(Cucumber.groovy:59)
+	at grails.plugin.cucumber.Cucumber.run(Cucumber.groovy:58)
+	at grails.plugin.cucumber.CucumberTestType.runFeatures(CucumberTestType.groovy:148)
+	at grails.plugin.cucumber.CucumberTestType.doRun(CucumberTestType.groovy:58)
+	at _GrailsTest$_run_closure1.doCall(_GrailsTest.groovy:102)
+	at TestApp$_run_closure1.doCall(TestApp.groovy:32)
+	at com.intellij.rt.execution.application.AppMain.main(AppMain.java:140)
+2015-10-05 16:34:23,498 [main] ERROR StackTrace  - Full Stack Trace:
+Assertion failed: 
+
+assert contrato != null
+       |        |
+       null     false
+
+	at steps.ContratoSteps$_run_closure1.doCall(ContratoSteps.groovy:13)
+	at ✽.Given o sistema tem um contrato com o jogador "Carlos" no periodo de "10/10/2010" ate "10/10/2016" no clube "ABC"(Contrato.feature:7)
+2015-10-05 16:34:23,512 [main] ERROR StackTrace  - Full Stack Trace:
+Assertion failed: 
+
+assert contrato != null
+       |        |
+       null     false
+
+	at steps.ContratoSteps$_run_closure1.doCall(ContratoSteps.groovy:13)
+	at ✽.Given o sistema tem um contrato com o jogador "Carlos" no periodo de "10/10/2010" ate "10/10/2016" no clube "ABC"(Contrato.feature:7)
+2015-10-05 16:34:23,555 [main] ERROR StackTrace  - Full Stack Trace:
+Assertion failed: 
+
+assert contrato != null
+       |        |
+       null     false
+
+	at steps.ContratoSteps$_run_closure1.doCall(ContratoSteps.groovy:13)
+	at ✽.Given o sistema tem um contrato com o jogador "Carlos" no periodo de "10/10/2010" ate "10/10/2016" no clube "ABC"(Contrato.feature:7)
+2015-10-05 16:34:23,556 [main] ERROR StackTrace  - Full Stack Trace:
+Assertion failed: 
+
+assert contrato != null
+       |        |
+       null     false
+
+	at steps.ContratoSteps$_run_closure1.doCall(ContratoSteps.groovy:13)
+	at ✽.Given o sistema tem um contrato com o jogador "Carlos" no periodo de "10/10/2010" ate "10/10/2016" no clube "ABC"(Contrato.feature:7)
+2015-10-05 16:47:58,683 [main] ERROR StackTrace  - Full Stack Trace:
+Assertion failed: 
+
+assert contrato != null
+       |        |
+       null     false
+
+	at steps.ContratoSteps$_run_closure1.doCall(ContratoSteps.groovy:13)
+	at ✽.Given o sistema tem um contrato com o jogador "Carlos" no periodo de "10/10/2010" ate "10/10/2016" no clube "ABC"(Contrato.feature:7)
+2015-10-05 16:47:58,844 [main] ERROR StackTrace  - Full Stack Trace:
+Assertion failed: 
+
+assert contrato != null
+       |        |
+       null     false
+
+	at steps.ContratoSteps$_run_closure1.doCall(ContratoSteps.groovy:13)
+	at ✽.Given o sistema tem um contrato com o jogador "Carlos" no periodo de "10/10/2010" ate "10/10/2016" no clube "ABC"(Contrato.feature:7)
+2015-10-05 16:47:58,881 [main] ERROR StackTrace  - Full Stack Trace:
+Assertion failed: 
+
+assert contrato != null
+       |        |
+       null     false
+
+	at steps.ContratoSteps$_run_closure1.doCall(ContratoSteps.groovy:13)
+	at ✽.Given o sistema tem um contrato com o jogador "Carlos" no periodo de "10/10/2010" ate "10/10/2016" no clube "ABC"(Contrato.feature:7)
+2015-10-05 16:47:58,881 [main] ERROR StackTrace  - Full Stack Trace:
+Assertion failed: 
+
+assert contrato != null
+       |        |
+       null     false
+
+	at steps.ContratoSteps$_run_closure1.doCall(ContratoSteps.groovy:13)
+	at ✽.Given o sistema tem um contrato com o jogador "Carlos" no periodo de "10/10/2010" ate "10/10/2016" no clube "ABC"(Contrato.feature:7)
+2015-10-05 17:00:46,248 [main] ERROR StackTrace  - Full Stack Trace:
+Assertion failed: 
+
+assert contrato != null
+       |        |
+       null     false
+
+	at steps.ContratoSteps$_run_closure1.doCall(ContratoSteps.groovy:18)
+	at ✽.Given o sistema tem um contrato com o jogador "Carlos" no periodo de "10/10/2010" ate "10/10/2016" no clube "ABC"(Contrato.feature:7)
+2015-10-05 17:00:46,301 [main] ERROR StackTrace  - Full Stack Trace:
+Assertion failed: 
+
+assert contrato != null
+       |        |
+       null     false
+
+	at steps.ContratoSteps$_run_closure1.doCall(ContratoSteps.groovy:18)
+	at ✽.Given o sistema tem um contrato com o jogador "Carlos" no periodo de "10/10/2010" ate "10/10/2016" no clube "ABC"(Contrato.feature:7)
+2015-10-05 17:00:46,321 [main] ERROR StackTrace  - Full Stack Trace:
+Assertion failed: 
+
+assert contrato != null
+       |        |
+       null     false
+
+	at steps.ContratoSteps$_run_closure1.doCall(ContratoSteps.groovy:18)
+	at ✽.Given o sistema tem um contrato com o jogador "Carlos" no periodo de "10/10/2010" ate "10/10/2016" no clube "ABC"(Contrato.feature:7)
+2015-10-05 17:00:46,322 [main] ERROR StackTrace  - Full Stack Trace:
+Assertion failed: 
+
+assert contrato != null
+       |        |
+       null     false
+
+	at steps.ContratoSteps$_run_closure1.doCall(ContratoSteps.groovy:18)
+	at ✽.Given o sistema tem um contrato com o jogador "Carlos" no periodo de "10/10/2010" ate "10/10/2016" no clube "ABC"(Contrato.feature:7)
+2015-10-05 17:04:41,003 [main] ERROR StackTrace  - Full Stack Trace:
+Assertion failed: 
+
+assert contrato != null
+       |        |
+       null     false
+
+	at steps.ContratoSteps$_run_closure1.doCall(ContratoSteps.groovy:19)
+	at ✽.Given o sistema tem um contrato com o jogador "Carlos" no periodo de "10/10/2010" ate "10/10/2016" no clube "ABC"(Contrato.feature:7)
+2015-10-05 17:04:41,043 [main] ERROR StackTrace  - Full Stack Trace:
+Assertion failed: 
+
+assert contrato != null
+       |        |
+       null     false
+
+	at steps.ContratoSteps$_run_closure1.doCall(ContratoSteps.groovy:19)
+	at ✽.Given o sistema tem um contrato com o jogador "Carlos" no periodo de "10/10/2010" ate "10/10/2016" no clube "ABC"(Contrato.feature:7)
+2015-10-05 17:04:41,076 [main] ERROR StackTrace  - Full Stack Trace:
+Assertion failed: 
+
+assert contrato != null
+       |        |
+       null     false
+
+	at steps.ContratoSteps$_run_closure1.doCall(ContratoSteps.groovy:19)
+	at ✽.Given o sistema tem um contrato com o jogador "Carlos" no periodo de "10/10/2010" ate "10/10/2016" no clube "ABC"(Contrato.feature:7)
+2015-10-05 17:04:41,076 [main] ERROR StackTrace  - Full Stack Trace:
+Assertion failed: 
+
+assert contrato != null
+       |        |
+       null     false
+
+	at steps.ContratoSteps$_run_closure1.doCall(ContratoSteps.groovy:19)
+	at ✽.Given o sistema tem um contrato com o jogador "Carlos" no periodo de "10/10/2010" ate "10/10/2016" no clube "ABC"(Contrato.feature:7)
+2015-10-05 17:06:57,487 [main] ERROR StackTrace  - Full Stack Trace:
+groovy.lang.MissingPropertyException: No such property: contratos for class: cucumber.runtime.groovy.GroovyWorld
+	at cucumber.runtime.groovy.GroovyWorld.findWorldWithProperty(GroovyWorld.java:47)
+	at cucumber.runtime.groovy.GroovyWorld.getProperty(GroovyWorld.java:30)
+	at steps.ContratoSteps$_run_closure1.doCall(ContratoSteps.groovy:18)
+	at ✽.Given o sistema tem um contrato com o jogador "Carlos" no periodo de "10/10/2010" ate "10/10/2016" no clube "ABC"(Contrato.feature:7)
+2015-10-05 17:06:57,520 [main] ERROR StackTrace  - Full Stack Trace:
+groovy.lang.MissingPropertyException: No such property: contratos for class: cucumber.runtime.groovy.GroovyWorld
+	at cucumber.runtime.groovy.GroovyWorld.findWorldWithProperty(GroovyWorld.java:47)
+	at cucumber.runtime.groovy.GroovyWorld.getProperty(GroovyWorld.java:30)
+	at steps.ContratoSteps$_run_closure1.doCall(ContratoSteps.groovy:18)
+	at ✽.Given o sistema tem um contrato com o jogador "Carlos" no periodo de "10/10/2010" ate "10/10/2016" no clube "ABC"(Contrato.feature:7)
+2015-10-05 17:06:57,530 [main] ERROR StackTrace  - Full Stack Trace:
+groovy.lang.MissingPropertyException: No such property: contratos for class: cucumber.runtime.groovy.GroovyWorld
+	at cucumber.runtime.groovy.GroovyWorld.findWorldWithProperty(GroovyWorld.java:47)
+	at cucumber.runtime.groovy.GroovyWorld.getProperty(GroovyWorld.java:30)
+	at steps.ContratoSteps$_run_closure1.doCall(ContratoSteps.groovy:18)
+	at ✽.Given o sistema tem um contrato com o jogador "Carlos" no periodo de "10/10/2010" ate "10/10/2016" no clube "ABC"(Contrato.feature:7)
+2015-10-05 17:06:57,531 [main] ERROR StackTrace  - Full Stack Trace:
+groovy.lang.MissingPropertyException: No such property: contratos for class: cucumber.runtime.groovy.GroovyWorld
+	at cucumber.runtime.groovy.GroovyWorld.findWorldWithProperty(GroovyWorld.java:47)
+	at cucumber.runtime.groovy.GroovyWorld.getProperty(GroovyWorld.java:30)
+	at steps.ContratoSteps$_run_closure1.doCall(ContratoSteps.groovy:18)
+	at ✽.Given o sistema tem um contrato com o jogador "Carlos" no periodo de "10/10/2010" ate "10/10/2016" no clube "ABC"(Contrato.feature:7)
+2015-10-05 17:09:00,365 [main] ERROR StackTrace  - Full Stack Trace:
+Assertion failed: 
+
+assert contrato != null
+       |        |
+       null     false
+
+	at steps.ContratoSteps$_run_closure1.doCall(ContratoSteps.groovy:19)
+	at ✽.Given o sistema tem um contrato com o jogador "Carlos" no periodo de "10/10/2010" ate "10/10/2016" no clube "ABC"(Contrato.feature:7)
+2015-10-05 17:09:00,371 [main] ERROR StackTrace  - Full Stack Trace:
+Assertion failed: 
+
+assert contrato != null
+       |        |
+       null     false
+
+	at steps.ContratoSteps$_run_closure1.doCall(ContratoSteps.groovy:19)
+	at ✽.Given o sistema tem um contrato com o jogador "Carlos" no periodo de "10/10/2010" ate "10/10/2016" no clube "ABC"(Contrato.feature:7)
+2015-10-05 17:09:00,392 [main] ERROR StackTrace  - Full Stack Trace:
+Assertion failed: 
+
+assert contrato != null
+       |        |
+       null     false
+
+	at steps.ContratoSteps$_run_closure1.doCall(ContratoSteps.groovy:19)
+	at ✽.Given o sistema tem um contrato com o jogador "Carlos" no periodo de "10/10/2010" ate "10/10/2016" no clube "ABC"(Contrato.feature:7)
+2015-10-05 17:09:00,392 [main] ERROR StackTrace  - Full Stack Trace:
+Assertion failed: 
+
+assert contrato != null
+       |        |
+       null     false
+
+	at steps.ContratoSteps$_run_closure1.doCall(ContratoSteps.groovy:19)
+	at ✽.Given o sistema tem um contrato com o jogador "Carlos" no periodo de "10/10/2010" ate "10/10/2016" no clube "ABC"(Contrato.feature:7)
+2015-10-05 17:11:05,218 [main] ERROR StackTrace  - Full Stack Trace:
+Assertion failed: 
+
+assert contrato != null
+       |        |
+       null     false
+
+	at steps.ContratoSteps$_run_closure1.doCall(ContratoSteps.groovy:19)
+	at ✽.Given o sistema tem um contrato com o jogador "Carlos" no periodo de "10/10/2010" ate "10/10/2016" no clube "ABC"(Contrato.feature:7)
+2015-10-05 17:11:05,223 [main] ERROR StackTrace  - Full Stack Trace:
+Assertion failed: 
+
+assert contrato != null
+       |        |
+       null     false
+
+	at steps.ContratoSteps$_run_closure1.doCall(ContratoSteps.groovy:19)
+	at ✽.Given o sistema tem um contrato com o jogador "Carlos" no periodo de "10/10/2010" ate "10/10/2016" no clube "ABC"(Contrato.feature:7)
+2015-10-05 17:11:05,266 [main] ERROR StackTrace  - Full Stack Trace:
+Assertion failed: 
+
+assert contrato != null
+       |        |
+       null     false
+
+	at steps.ContratoSteps$_run_closure1.doCall(ContratoSteps.groovy:19)
+	at ✽.Given o sistema tem um contrato com o jogador "Carlos" no periodo de "10/10/2010" ate "10/10/2016" no clube "ABC"(Contrato.feature:7)
+2015-10-05 17:11:05,267 [main] ERROR StackTrace  - Full Stack Trace:
+Assertion failed: 
+
+assert contrato != null
+       |        |
+       null     false
+
+	at steps.ContratoSteps$_run_closure1.doCall(ContratoSteps.groovy:19)
+	at ✽.Given o sistema tem um contrato com o jogador "Carlos" no periodo de "10/10/2010" ate "10/10/2016" no clube "ABC"(Contrato.feature:7)
+2015-10-05 17:12:45,260 [main] ERROR StackTrace  - Full Stack Trace:
+Assertion failed: 
+
+assert contrato != null
+       |        |
+       null     false
+
+	at steps.ContratoSteps$_run_closure1.doCall(ContratoSteps.groovy:19)
+	at ✽.Given o sistema tem um contrato com o jogador "Carlos" no periodo de "10/10/2010" ate "10/10/2016" no clube "ABC"(Contrato.feature:7)
+2015-10-05 17:12:45,268 [main] ERROR StackTrace  - Full Stack Trace:
+Assertion failed: 
+
+assert contrato != null
+       |        |
+       null     false
+
+	at steps.ContratoSteps$_run_closure1.doCall(ContratoSteps.groovy:19)
+	at ✽.Given o sistema tem um contrato com o jogador "Carlos" no periodo de "10/10/2010" ate "10/10/2016" no clube "ABC"(Contrato.feature:7)
+2015-10-05 17:12:45,293 [main] ERROR StackTrace  - Full Stack Trace:
+Assertion failed: 
+
+assert contrato != null
+       |        |
+       null     false
+
+	at steps.ContratoSteps$_run_closure1.doCall(ContratoSteps.groovy:19)
+	at ✽.Given o sistema tem um contrato com o jogador "Carlos" no periodo de "10/10/2010" ate "10/10/2016" no clube "ABC"(Contrato.feature:7)
+2015-10-05 17:12:45,294 [main] ERROR StackTrace  - Full Stack Trace:
+Assertion failed: 
+
+assert contrato != null
+       |        |
+       null     false
+
+	at steps.ContratoSteps$_run_closure1.doCall(ContratoSteps.groovy:19)
+	at ✽.Given o sistema tem um contrato com o jogador "Carlos" no periodo de "10/10/2010" ate "10/10/2016" no clube "ABC"(Contrato.feature:7)

@@ -1,6 +1,7 @@
 package steps
 
 import ga.ContratoController
+import ga.Contrato
 
 class ContratoTestDataAndOperations{
 
@@ -14,22 +15,12 @@ class ContratoTestDataAndOperations{
         controller.saveContrato(controller.criarContrato())
         controller.response.reset()
     }
-   
-    public static void createContrato(String contratante, String contratado, String data_Inicio, String data_Termino) {
-		def cont = new ContratoController()
-        cont.params << [contratante: contratante, contratado: contratado,
-                data_Inicio: data_Inicio, data_Termino: data_termino, valor: 1200.00]
-        cont.request.setContent(new byte[1000]) // Could also vary the request content.
-        cont.create()
-        cont.save()
-        cont.response.reset()
-	}
 
-	public static void removeContrato(String contratante, String contratado, String data_Inicio, String data_Termino) {
-        def testContrato = Contrato.findWHere(contratado: contratado, contratante: contratante data_Inicio: dateBegin, data_Termino: dateEnd)
-        def cont = new PeriodicoController()
+
+    public static void removeContrato(String contratante, String contratado, String data_Inicio, String data_Termino) {
+        def testContrato = Contrato.findWhere(contratado: contratado, contratante: contratante, data_Inicio: data_Inicio, data_Termino: data_Termino)
+        def cont = new ContratoController()
         cont.params << [contratado: testContrato.contratado, contratante: testContrato.contratante, data_Inicio: testContrato.dateBegin, data_Termino: testContrato.dateEnd]
         cont.delete()
     }
 }
-
